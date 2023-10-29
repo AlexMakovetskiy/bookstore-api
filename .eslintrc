@@ -1,0 +1,19 @@
+{
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+
+    "env": {
+        "es6": true
+    },
+    "rules": {
+        "no-console": "off",
+        "quotes": ["warn", "single"],
+        "jsx-quotes": ["warn", "prefer-double"],
+        "prefer-const": "error",
+        "indent": ["warn", 4],
+        "max-len": ["error", {"code": 160}],
+        "comma-dangle": ["error", "always-multiline"],
+        "semi": ["warn", "always"]
+    } 
+}
