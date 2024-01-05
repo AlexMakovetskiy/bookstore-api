@@ -26,7 +26,6 @@
         "eqeqeq": "error",
         "no-use-before-define": ["error", { "functions": false }],
         "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
-        "arrow-parens": ["error", "as-needed"],
         "prefer-template": "error",
         "prefer-destructuring": "error",
         "no-empty-function": "error",
