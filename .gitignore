@@ -1,5 +1,4 @@
 /node_modules
-/.eslintrc
 /.env
 /.vscode
 # Local Netlify folder

@@ -1,0 +1,119 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2022
+    },
+    "env": {
+        "node": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:sonarjs/recommended",
+		"prettier"
+    ],
+    "plugins": ["prettier", "sonarjs"],
+    "rules": {
+        "no-console": "warn",
+        "quotes": ["warn", "double"],
+        "prefer-const": "error",
+        "no-unused-vars": "warn",
+        "object-curly-spacing": ["error", "always"],
+        "no-trailing-spaces": "error",
+        "eol-last": "off",
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "no-var": "error",
+        "no-undef": "error",
+        "eqeqeq": "error",
+        "no-use-before-define": ["error", { "functions": false }],
+        "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+        "prefer-template": "error",
+        "prefer-destructuring": "error",
+        "no-empty-function": "error",
+        "no-useless-return": "error",
+        "no-new-wrappers": "error",
+        "no-array-constructor": "error",
+        "no-new-func": "error",
+        "sonarjs/no-duplicate-string": "warn",
+		"sonarjs/prefer-immediate-return": "warn",
+        "no-magic-numbers": ["warn", {
+			"ignore": [1, 0, -1, 2], 
+			"ignoreArrayIndexes": true,
+			"ignoreDefaultValues": true
+			}
+		],
+
+        "no-this-before-super": "error",
+        "no-useless-constructor": "error",
+        "no-dupe-class-members": "error",
+        "prefer-arrow-callback": "error",
+        "no-await-in-loop": "error",
+        "no-loop-func": "error",
+        "no-else-return": "error",
+        "no-prototype-builtins": "error",
+        "prefer-rest-params": "error",
+        "no-restricted-properties": [
+            "error",
+            {
+                "object": "arguments",
+                "property": "callee",
+                "message": "arguments.callee is deprecated"
+            },
+            {
+                "object": "global",
+                "property": "isFinite",
+                "message": "Please use Number.isFinite instead"
+            },
+            {
+                "object": "self",
+                "property": "isFinite",
+                "message": "Please use Number.isFinite instead"
+            },
+            {
+                "object": "window",
+                "property": "isFinite",
+                "message": "Please use Number.isFinite instead"
+            },
+            {
+                "object": "global",
+                "property": "isNaN",
+                "message": "Please use Number.isNaN instead"
+            },
+            {
+                "object": "self",
+                "property": "isNaN",
+                "message": "Please use Number.isNaN instead"
+            },
+            {
+                "object": "window",
+                "property": "isNaN",
+                "message": "Please use Number.isNaN instead"
+            },
+            {
+                "property": "__defineGetter__",
+                "message": "Please use Object.defineProperty instead."
+            },
+            {
+                "property": "__defineSetter__",
+                "message": "Please use Object.defineProperty instead."
+            },
+            {
+                "object": "Math",
+                "property": "pow",
+                "message": "Use the exponentiation operator (**) instead."
+            }
+        ],
+        "no-underscore-dangle": "off",
+        "no-throw-literal": "error",
+        "no-eval": "error",
+        "no-implied-eval": "error",
+        "no-script-url": "error",
+        "no-process-exit": "error",
+        "no-extend-native": "error",
+        "no-useless-catch": "error",
+        "no-useless-escape": "error",
+        "no-useless-concat": "error",
+        "prefer-numeric-literals": "error",
+        "prefer-promise-reject-errors": "error",
+        "prefer-reflect": "error"
+    } 
+}
