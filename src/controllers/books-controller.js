@@ -1,4 +1,3 @@
-/* eslint-disable prefer-destructuring */
 const { validationResult } = require("express-validator");
 
 const userService = require("../services/user-service");
@@ -46,7 +45,7 @@ class BooksController {
 
 	async getdata(request, response, next) {
 		try {
-			const userToken = request.headers.authorization.split(" ")[1];
+			const userToken = request.headers.authorization.split(" ").pop();
 			const userData = await userService.module.getdata(userToken);
 
 			response.status(httpResponseNumbers.ok);
@@ -69,7 +68,7 @@ class BooksController {
 
 	async logout(request, response, next) {
 		try {
-			const userToken = request.headers.authorization.split(" ")[1];
+			const userToken = request.headers.authorization.split(" ").pop();
 			const logoutStatus = await userService.module.logout(userToken);
 			return response.status(httpResponseNumbers.ok).json(logoutStatus);
 		} catch (error) {

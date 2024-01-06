@@ -1,4 +1,3 @@
-/* eslint-disable prefer-destructuring */
 const ApiError = require("../exceptions/api-error");
 const tokenService = require("../services/token-service");
 
@@ -8,7 +7,7 @@ module.exports = function (request, response, next) {
 		const authorizationHeader = request.headers.authorization;
 		if (!authorizationHeader) return next(ApiError.UnauthorizedError());
 
-		const userToken = authorizationHeader.split(" ")[1];
+		const userToken = authorizationHeader.split(" ").pop();
 		if (!userToken) return next(ApiError.UnauthorizedError());
 
 		const userData = tokenService.module.validateAccessToken(userToken);
